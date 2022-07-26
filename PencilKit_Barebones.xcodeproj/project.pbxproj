@@ -7,22 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		26034E9F288FB73500B4A88A /* PencilKitBarebonesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26034E9E288FB73500B4A88A /* PencilKitBarebonesApp.swift */; };
-		26034EA1288FB73500B4A88A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26034EA0288FB73500B4A88A /* ContentView.swift */; };
-		26034EA3288FB73700B4A88A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26034EA2288FB73700B4A88A /* Assets.xcassets */; };
-		26034EA6288FB73700B4A88A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26034EA5288FB73700B4A88A /* Preview Assets.xcassets */; };
+		2604A6C5288FBA8D00D7B3D8 /* PencilKit_BarebonesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2604A6C4288FBA8D00D7B3D8 /* PencilKit_BarebonesApp.swift */; };
+		2604A6C7288FBA8D00D7B3D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2604A6C6288FBA8D00D7B3D8 /* ContentView.swift */; };
+		2604A6C9288FBA8E00D7B3D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2604A6C8288FBA8E00D7B3D8 /* Assets.xcassets */; };
+		2604A6CC288FBA8E00D7B3D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2604A6CB288FBA8E00D7B3D8 /* Preview Assets.xcassets */; };
+		2604A6CE288FBA8E00D7B3D8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2604A6CD288FBA8E00D7B3D8 /* Persistence.swift */; };
+		2604A6D1288FBA8E00D7B3D8 /* PencilKit_Barebones.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2604A6CF288FBA8E00D7B3D8 /* PencilKit_Barebones.xcdatamodeld */; };
+		2604A6D8288FBE2F00D7B3D8 /* AddCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2604A6D7288FBE2F00D7B3D8 /* AddCanvasView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		26034E9B288FB73500B4A88A /* PencilKitBarebones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PencilKitBarebones.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		26034E9E288FB73500B4A88A /* PencilKitBarebonesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PencilKitBarebonesApp.swift; sourceTree = "<group>"; };
-		26034EA0288FB73500B4A88A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		26034EA2288FB73700B4A88A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		26034EA5288FB73700B4A88A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2604A6C1288FBA8D00D7B3D8 /* PencilKit_Barebones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PencilKit_Barebones.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2604A6C4288FBA8D00D7B3D8 /* PencilKit_BarebonesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PencilKit_BarebonesApp.swift; sourceTree = "<group>"; };
+		2604A6C6288FBA8D00D7B3D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2604A6C8288FBA8E00D7B3D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2604A6CB288FBA8E00D7B3D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2604A6CD288FBA8E00D7B3D8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		2604A6D0288FBA8E00D7B3D8 /* PencilKit_Barebones.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PencilKit_Barebones.xcdatamodel; sourceTree = "<group>"; };
+		2604A6D7288FBE2F00D7B3D8 /* AddCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCanvasView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		26034E98288FB73500B4A88A /* Frameworks */ = {
+		2604A6BE288FBA8D00D7B3D8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -32,37 +38,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		26034E92288FB73500B4A88A = {
+		2604A6B8288FBA8D00D7B3D8 = {
 			isa = PBXGroup;
 			children = (
-				26034E9D288FB73500B4A88A /* PencilKitBarebones */,
-				26034E9C288FB73500B4A88A /* Products */,
+				2604A6C3288FBA8D00D7B3D8 /* PencilKit_Barebones */,
+				2604A6C2288FBA8D00D7B3D8 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		26034E9C288FB73500B4A88A /* Products */ = {
+		2604A6C2288FBA8D00D7B3D8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				26034E9B288FB73500B4A88A /* PencilKitBarebones.app */,
+				2604A6C1288FBA8D00D7B3D8 /* PencilKit_Barebones.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		26034E9D288FB73500B4A88A /* PencilKitBarebones */ = {
+		2604A6C3288FBA8D00D7B3D8 /* PencilKit_Barebones */ = {
 			isa = PBXGroup;
 			children = (
-				26034E9E288FB73500B4A88A /* PencilKitBarebonesApp.swift */,
-				26034EA0288FB73500B4A88A /* ContentView.swift */,
-				26034EA2288FB73700B4A88A /* Assets.xcassets */,
-				26034EA4288FB73700B4A88A /* Preview Content */,
+				2604A6C4288FBA8D00D7B3D8 /* PencilKit_BarebonesApp.swift */,
+				2604A6C6288FBA8D00D7B3D8 /* ContentView.swift */,
+				2604A6D7288FBE2F00D7B3D8 /* AddCanvasView.swift */,
+				2604A6C8288FBA8E00D7B3D8 /* Assets.xcassets */,
+				2604A6CD288FBA8E00D7B3D8 /* Persistence.swift */,
+				2604A6CF288FBA8E00D7B3D8 /* PencilKit_Barebones.xcdatamodeld */,
+				2604A6CA288FBA8E00D7B3D8 /* Preview Content */,
 			);
-			path = PencilKitBarebones;
+			path = PencilKit_Barebones;
 			sourceTree = "<group>";
 		};
-		26034EA4288FB73700B4A88A /* Preview Content */ = {
+		2604A6CA288FBA8E00D7B3D8 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				26034EA5288FB73700B4A88A /* Preview Assets.xcassets */,
+				2604A6CB288FBA8E00D7B3D8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -70,39 +79,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		26034E9A288FB73500B4A88A /* PencilKitBarebones */ = {
+		2604A6C0288FBA8D00D7B3D8 /* PencilKit_Barebones */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 26034EA9288FB73700B4A88A /* Build configuration list for PBXNativeTarget "PencilKitBarebones" */;
+			buildConfigurationList = 2604A6D4288FBA8E00D7B3D8 /* Build configuration list for PBXNativeTarget "PencilKit_Barebones" */;
 			buildPhases = (
-				26034E97288FB73500B4A88A /* Sources */,
-				26034E98288FB73500B4A88A /* Frameworks */,
-				26034E99288FB73500B4A88A /* Resources */,
+				2604A6BD288FBA8D00D7B3D8 /* Sources */,
+				2604A6BE288FBA8D00D7B3D8 /* Frameworks */,
+				2604A6BF288FBA8D00D7B3D8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = PencilKitBarebones;
-			productName = PencilKitBarebones;
-			productReference = 26034E9B288FB73500B4A88A /* PencilKitBarebones.app */;
+			name = PencilKit_Barebones;
+			productName = PencilKit_Barebones;
+			productReference = 2604A6C1288FBA8D00D7B3D8 /* PencilKit_Barebones.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		26034E93288FB73500B4A88A /* Project object */ = {
+		2604A6B9288FBA8D00D7B3D8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
-					26034E9A288FB73500B4A88A = {
+					2604A6C0288FBA8D00D7B3D8 = {
 						CreatedOnToolsVersion = 13.3.1;
 					};
 				};
 			};
-			buildConfigurationList = 26034E96288FB73500B4A88A /* Build configuration list for PBXProject "PencilKitBarebones" */;
+			buildConfigurationList = 2604A6BC288FBA8D00D7B3D8 /* Build configuration list for PBXProject "PencilKit_Barebones" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,42 +119,45 @@
 				en,
 				Base,
 			);
-			mainGroup = 26034E92288FB73500B4A88A;
-			productRefGroup = 26034E9C288FB73500B4A88A /* Products */;
+			mainGroup = 2604A6B8288FBA8D00D7B3D8;
+			productRefGroup = 2604A6C2288FBA8D00D7B3D8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				26034E9A288FB73500B4A88A /* PencilKitBarebones */,
+				2604A6C0288FBA8D00D7B3D8 /* PencilKit_Barebones */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		26034E99288FB73500B4A88A /* Resources */ = {
+		2604A6BF288FBA8D00D7B3D8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26034EA6288FB73700B4A88A /* Preview Assets.xcassets in Resources */,
-				26034EA3288FB73700B4A88A /* Assets.xcassets in Resources */,
+				2604A6CC288FBA8E00D7B3D8 /* Preview Assets.xcassets in Resources */,
+				2604A6C9288FBA8E00D7B3D8 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		26034E97288FB73500B4A88A /* Sources */ = {
+		2604A6BD288FBA8D00D7B3D8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26034EA1288FB73500B4A88A /* ContentView.swift in Sources */,
-				26034E9F288FB73500B4A88A /* PencilKitBarebonesApp.swift in Sources */,
+				2604A6CE288FBA8E00D7B3D8 /* Persistence.swift in Sources */,
+				2604A6C7288FBA8D00D7B3D8 /* ContentView.swift in Sources */,
+				2604A6D1288FBA8E00D7B3D8 /* PencilKit_Barebones.xcdatamodeld in Sources */,
+				2604A6C5288FBA8D00D7B3D8 /* PencilKit_BarebonesApp.swift in Sources */,
+				2604A6D8288FBE2F00D7B3D8 /* AddCanvasView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		26034EA7288FB73700B4A88A /* Debug */ = {
+		2604A6D2288FBA8E00D7B3D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -205,7 +217,7 @@
 			};
 			name = Debug;
 		};
-		26034EA8288FB73700B4A88A /* Release */ = {
+		2604A6D3288FBA8E00D7B3D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -259,15 +271,15 @@
 			};
 			name = Release;
 		};
-		26034EAA288FB73700B4A88A /* Debug */ = {
+		2604A6D5288FBA8E00D7B3D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PencilKitBarebones/Preview Content\"";
-				DEVELOPMENT_TEAM = 4QG3GC35LA;
+				DEVELOPMENT_ASSET_PATHS = "\"PencilKit_Barebones/Preview Content\"";
+				DEVELOPMENT_TEAM = 9GHM5422CF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -280,7 +292,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = codershigh.PencilKitBarebones;
+				PRODUCT_BUNDLE_IDENTIFIER = "codershigh.PencilKit-Barebones";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -288,15 +300,15 @@
 			};
 			name = Debug;
 		};
-		26034EAB288FB73700B4A88A /* Release */ = {
+		2604A6D6288FBA8E00D7B3D8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"PencilKitBarebones/Preview Content\"";
-				DEVELOPMENT_TEAM = 4QG3GC35LA;
+				DEVELOPMENT_ASSET_PATHS = "\"PencilKit_Barebones/Preview Content\"";
+				DEVELOPMENT_TEAM = 9GHM5422CF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -309,7 +321,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = codershigh.PencilKitBarebones;
+				PRODUCT_BUNDLE_IDENTIFIER = "codershigh.PencilKit-Barebones";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -320,25 +332,38 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		26034E96288FB73500B4A88A /* Build configuration list for PBXProject "PencilKitBarebones" */ = {
+		2604A6BC288FBA8D00D7B3D8 /* Build configuration list for PBXProject "PencilKit_Barebones" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				26034EA7288FB73700B4A88A /* Debug */,
-				26034EA8288FB73700B4A88A /* Release */,
+				2604A6D2288FBA8E00D7B3D8 /* Debug */,
+				2604A6D3288FBA8E00D7B3D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		26034EA9288FB73700B4A88A /* Build configuration list for PBXNativeTarget "PencilKitBarebones" */ = {
+		2604A6D4288FBA8E00D7B3D8 /* Build configuration list for PBXNativeTarget "PencilKit_Barebones" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				26034EAA288FB73700B4A88A /* Debug */,
-				26034EAB288FB73700B4A88A /* Release */,
+				2604A6D5288FBA8E00D7B3D8 /* Debug */,
+				2604A6D6288FBA8E00D7B3D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2604A6CF288FBA8E00D7B3D8 /* PencilKit_Barebones.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2604A6D0288FBA8E00D7B3D8 /* PencilKit_Barebones.xcdatamodel */,
+			);
+			currentVersion = 2604A6D0288FBA8E00D7B3D8 /* PencilKit_Barebones.xcdatamodel */;
+			path = PencilKit_Barebones.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
-	rootObject = 26034E93288FB73500B4A88A /* Project object */;
+	rootObject = 2604A6B9288FBA8D00D7B3D8 /* Project object */;
 }
