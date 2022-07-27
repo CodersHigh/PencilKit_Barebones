@@ -8,13 +8,13 @@
 import SwiftUI
 import CoreData
 import PencilKit
+import Photos
 
 struct DrawingView: View {
     @ObservedObject var viewModel: DrawingViewModel
     @Environment(\.undoManager) private var undoManager
     @State var drawing: Drawing
     @State private var canvasView = PKCanvasView()
-    @State private var showingAlert = false
     
     var body: some View {
         DrawingCanvasView(canvasView: canvasView, drawing: $drawing)
@@ -22,14 +22,13 @@ struct DrawingView: View {
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
                     HStack(spacing: 10) {
-                      Button {
-                          // 현재 canvasView 캡처해서 앨범에 저장
-                      } label: {
-                          Image(systemName: "camera")
-                      }
-                      .alert(isPresented: $showingAlert) {
-                          Alert(title: Text("그림이 앨범에 저장되었습니다."))
-                      }
+                        Button {
+                            // 현재 canvasView 캡처해서 앨범에 저장
+                            let image = canvasView.drawing.image(from: canvasView.drawing.bounds, scale: 1)
+                            UIImageWriteToSavedPhotosAlbum(image, self, nil, nil)
+                        } label: {
+                            Image(systemName: "camera")
+                        }
                         Button {
                             // 현재 드로잉 진행 상황을 저장
                         } label: {
@@ -81,7 +80,9 @@ struct DrawingCanvasView: UIViewRepresentable {
     func updateUIView(_ uiView: PKCanvasView, context: Context) {
         self.toolPicker.addObserver(canvasView)
         self.toolPicker.setVisible(true, forFirstResponder: uiView)
-        uiView.becomeFirstResponder()
+        DispatchQueue.main.async {
+            uiView.becomeFirstResponder()
+        }
     }
     
 }

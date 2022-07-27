@@ -28,6 +28,7 @@
 		2604A6D7288FBE2F00D7B3D8 /* AddCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCanvasView.swift; sourceTree = "<group>"; };
 		2604A6D9288FC91800D7B3D8 /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
 		2604A6E02890BCC300D7B3D8 /* DrawingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewModel.swift; sourceTree = "<group>"; };
+		2604A6E22890E15400D7B3D8 /* PencilKit-Barebones-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "PencilKit-Barebones-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +61,7 @@
 		2604A6C3288FBA8D00D7B3D8 /* PencilKit_Barebones */ = {
 			isa = PBXGroup;
 			children = (
+				2604A6E22890E15400D7B3D8 /* PencilKit-Barebones-Info.plist */,
 				2604A6C4288FBA8D00D7B3D8 /* PencilKit_BarebonesApp.swift */,
 				2604A6C8288FBA8E00D7B3D8 /* Assets.xcassets */,
 				2604A6DD2890BC7100D7B3D8 /* View */,
@@ -312,6 +314,9 @@
 				DEVELOPMENT_TEAM = 9GHM5422CF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PencilKit-Barebones-Info.plist";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "현재 그려진 그림을 사진 앨범에 저장합니다. ";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "아아아아아";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -341,6 +346,9 @@
 				DEVELOPMENT_TEAM = 9GHM5422CF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PencilKit-Barebones-Info.plist";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "현재 그려진 그림을 사진 앨범에 저장합니다. ";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "아아아아아";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
