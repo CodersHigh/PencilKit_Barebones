@@ -12,31 +12,38 @@ import PencilKit
 struct DrawingView: View {
     @ObservedObject var viewModel: DrawingViewModel
     @State var drawing: Drawing
+    @State private var canvasView = PKCanvasView()
     
     var body: some View {
-        DrawingCanvasView(drawing: $drawing)
+        DrawingCanvasView(canvasView: canvasView, drawing: $drawing)
             .navigationTitle(drawing.title ?? "Untitled")
+            .toolbar {
+                
+            }
     }
 }
 
 struct DrawingCanvasView: UIViewRepresentable {
     
-    @State private var canvas = PKCanvasView()
+    var canvasView: PKCanvasView
+    private let toolPicker = PKToolPicker()
+    
     @Binding var drawing: Drawing
     
     func makeUIView(context: Context) -> PKCanvasView {
-        
-        canvas.drawingPolicy = .anyInput
-        
+        self.canvasView.drawingPolicy = .anyInput
+        self.canvasView.tool = PKInkingTool(.pen, color: .black, width: 15)
+        self.canvasView.becomeFirstResponder()
         if let drawing = try? PKDrawing(data: drawing.data ?? Data()) {
-            canvas.drawing = drawing
+            canvasView.drawing = drawing
         }
-        
-        return canvas
+        return canvasView
     }
     
     func updateUIView(_ uiView: PKCanvasView, context: Context) {
-        
+        self.toolPicker.addObserver(canvasView)
+        self.toolPicker.setVisible(true, forFirstResponder: uiView)
+        uiView.becomeFirstResponder()
     }
     
 }
