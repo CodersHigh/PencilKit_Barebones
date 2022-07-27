@@ -8,20 +8,18 @@
 import SwiftUI
 import CoreData
 
-struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-    
-    @FetchRequest(entity: Drawing.entity(), sortDescriptors: []) var drawings: FetchedResults<Drawing>
-    
+struct DrawingListView: View {
+    @StateObject var viewModel = DrawingViewModel()
     @State private var showingSheet = false
-    
 
     var body: some View {
         NavigationView {
             VStack {
                 List {
-                    ForEach(drawings) { drawing in
-                        Text(drawing.title ?? "Untitled")
+                    ForEach(viewModel.drawings, id: \.self) { drawing in
+                        NavigationLink(destination: DrawingView(viewModel: viewModel, drawing: drawing)) {
+                            Text(drawing.title ?? "untitled")
+                        }
                     }
                     Button {
                         self.showingSheet.toggle()
@@ -33,13 +31,13 @@ struct ContentView: View {
                     }
                     .foregroundColor(.blue)
                     .sheet(isPresented: $showingSheet) {
-                        AddCanvasView().environment(\.managedObjectContext, viewContext)
+                        AddCanvasView { title in
+                            viewModel.addDrawing(title: title)
+                            viewModel.fetchDrawing()
+                        }
                     }
                 }
                 .navigationTitle(Text("그림들"))
-                .toolbar {
-                    EditButton()
-                }
             }
             VStack {
                 Image(systemName: "scribble.variable")
@@ -51,10 +49,4 @@ struct ContentView: View {
         .navigationViewStyle(DoubleColumnNavigationViewStyle())
     }
     
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
-    }
 }

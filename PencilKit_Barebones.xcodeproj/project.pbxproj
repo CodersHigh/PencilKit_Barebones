@@ -8,23 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		2604A6C5288FBA8D00D7B3D8 /* PencilKit_BarebonesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2604A6C4288FBA8D00D7B3D8 /* PencilKit_BarebonesApp.swift */; };
-		2604A6C7288FBA8D00D7B3D8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2604A6C6288FBA8D00D7B3D8 /* ContentView.swift */; };
+		2604A6C7288FBA8D00D7B3D8 /* DrawingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2604A6C6288FBA8D00D7B3D8 /* DrawingListView.swift */; };
 		2604A6C9288FBA8E00D7B3D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2604A6C8288FBA8E00D7B3D8 /* Assets.xcassets */; };
 		2604A6CC288FBA8E00D7B3D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2604A6CB288FBA8E00D7B3D8 /* Preview Assets.xcassets */; };
-		2604A6CE288FBA8E00D7B3D8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2604A6CD288FBA8E00D7B3D8 /* Persistence.swift */; };
-		2604A6D1288FBA8E00D7B3D8 /* PencilKit_Barebones.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2604A6CF288FBA8E00D7B3D8 /* PencilKit_Barebones.xcdatamodeld */; };
+		2604A6D1288FBA8E00D7B3D8 /* DrawingModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2604A6CF288FBA8E00D7B3D8 /* DrawingModel.xcdatamodeld */; };
 		2604A6D8288FBE2F00D7B3D8 /* AddCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2604A6D7288FBE2F00D7B3D8 /* AddCanvasView.swift */; };
+		2604A6DA288FC91800D7B3D8 /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2604A6D9288FC91800D7B3D8 /* DrawingView.swift */; };
+		2604A6E12890BCC300D7B3D8 /* DrawingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2604A6E02890BCC300D7B3D8 /* DrawingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2604A6C1288FBA8D00D7B3D8 /* PencilKit_Barebones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PencilKit_Barebones.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2604A6C4288FBA8D00D7B3D8 /* PencilKit_BarebonesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PencilKit_BarebonesApp.swift; sourceTree = "<group>"; };
-		2604A6C6288FBA8D00D7B3D8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2604A6C6288FBA8D00D7B3D8 /* DrawingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingListView.swift; sourceTree = "<group>"; };
 		2604A6C8288FBA8E00D7B3D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2604A6CB288FBA8E00D7B3D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2604A6CD288FBA8E00D7B3D8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		2604A6D0288FBA8E00D7B3D8 /* PencilKit_Barebones.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PencilKit_Barebones.xcdatamodel; sourceTree = "<group>"; };
 		2604A6D7288FBE2F00D7B3D8 /* AddCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCanvasView.swift; sourceTree = "<group>"; };
+		2604A6D9288FC91800D7B3D8 /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
+		2604A6E02890BCC300D7B3D8 /* DrawingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +61,11 @@
 			isa = PBXGroup;
 			children = (
 				2604A6C4288FBA8D00D7B3D8 /* PencilKit_BarebonesApp.swift */,
-				2604A6C6288FBA8D00D7B3D8 /* ContentView.swift */,
-				2604A6D7288FBE2F00D7B3D8 /* AddCanvasView.swift */,
 				2604A6C8288FBA8E00D7B3D8 /* Assets.xcassets */,
+				2604A6DD2890BC7100D7B3D8 /* View */,
+				2604A6DB2890BC5A00D7B3D8 /* ViewModel */,
+				2604A6DC2890BC6600D7B3D8 /* Model */,
 				2604A6CD288FBA8E00D7B3D8 /* Persistence.swift */,
-				2604A6CF288FBA8E00D7B3D8 /* PencilKit_Barebones.xcdatamodeld */,
 				2604A6CA288FBA8E00D7B3D8 /* Preview Content */,
 			);
 			path = PencilKit_Barebones;
@@ -74,6 +77,32 @@
 				2604A6CB288FBA8E00D7B3D8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2604A6DB2890BC5A00D7B3D8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2604A6E02890BCC300D7B3D8 /* DrawingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2604A6DC2890BC6600D7B3D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2604A6CF288FBA8E00D7B3D8 /* DrawingModel.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2604A6DD2890BC7100D7B3D8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2604A6C6288FBA8D00D7B3D8 /* DrawingListView.swift */,
+				2604A6D7288FBE2F00D7B3D8 /* AddCanvasView.swift */,
+				2604A6D9288FC91800D7B3D8 /* DrawingView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,11 +175,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2604A6CE288FBA8E00D7B3D8 /* Persistence.swift in Sources */,
-				2604A6C7288FBA8D00D7B3D8 /* ContentView.swift in Sources */,
-				2604A6D1288FBA8E00D7B3D8 /* PencilKit_Barebones.xcdatamodeld in Sources */,
+				2604A6C7288FBA8D00D7B3D8 /* DrawingListView.swift in Sources */,
+				2604A6D1288FBA8E00D7B3D8 /* DrawingModel.xcdatamodeld in Sources */,
+				2604A6DA288FC91800D7B3D8 /* DrawingView.swift in Sources */,
 				2604A6C5288FBA8D00D7B3D8 /* PencilKit_BarebonesApp.swift in Sources */,
 				2604A6D8288FBE2F00D7B3D8 /* AddCanvasView.swift in Sources */,
+				2604A6E12890BCC300D7B3D8 /* DrawingViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,13 +383,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		2604A6CF288FBA8E00D7B3D8 /* PencilKit_Barebones.xcdatamodeld */ = {
+		2604A6CF288FBA8E00D7B3D8 /* DrawingModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				2604A6D0288FBA8E00D7B3D8 /* PencilKit_Barebones.xcdatamodel */,
 			);
 			currentVersion = 2604A6D0288FBA8E00D7B3D8 /* PencilKit_Barebones.xcdatamodel */;
-			path = PencilKit_Barebones.xcdatamodeld;
+			path = DrawingModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

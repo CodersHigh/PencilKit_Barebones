@@ -8,11 +8,9 @@
 import SwiftUI
 
 struct AddCanvasView: View {
-    
-    @Environment (\.managedObjectContext) var viewContext
     @Environment (\.presentationMode) var presentationMode
-    
     @State private var canvasTitle = ""
+    let onComplete: (String) -> Void
     
     var body: some View {
         NavigationView {
@@ -27,27 +25,10 @@ struct AddCanvasView: View {
             .navigationBarItems(leading: Button("취소") {
                 self.presentationMode.wrappedValue.dismiss()
             }, trailing: Button("저장") {
-                if !canvasTitle.isEmpty {
-                    let drawing = Drawing(context: viewContext)
-                    drawing.title = canvasTitle
-                    drawing.id = UUID()
-                    
-                    do {
-                        try viewContext.save()
-                    } catch {
-                        print(error)
-                    }
-                    
-                    self.presentationMode.wrappedValue.dismiss()
-                }}
-                .disabled(canvasTitle.isEmpty)
-            )
+                onComplete(canvasTitle)
+                self.presentationMode.wrappedValue.dismiss()
+            }
+            .disabled(canvasTitle.isEmpty))
         }
-    }
-}
-
-struct AddCanvasView__Previews: PreviewProvider {
-    static var previews: some View {
-        AddCanvasView()
     }
 }
