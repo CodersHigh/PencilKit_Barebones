@@ -47,6 +47,9 @@ struct DrawingListView: View {
             }
         }
         .navigationViewStyle(DoubleColumnNavigationViewStyle())
+        .onAppear {
+            viewModel.fetchDrawing()
+        }
     }
     
 }

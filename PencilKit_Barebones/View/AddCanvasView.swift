@@ -19,7 +19,6 @@ struct AddCanvasView: View {
                     TextField("여기에 새로운 그림의 제목을 입력하세요.", text: $canvasTitle)
                 }
             }
-            .padding(.top, 10)
             .navigationViewStyle(StackNavigationViewStyle())
             .navigationTitle(Text("새로운 그림"))
             .navigationBarItems(leading: Button("취소") {
