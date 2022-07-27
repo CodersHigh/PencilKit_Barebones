@@ -11,33 +11,55 @@ import PencilKit
 
 struct DrawingView: View {
     @ObservedObject var viewModel: DrawingViewModel
+    @Environment(\.undoManager) private var undoManager
     @State var drawing: Drawing
     @State private var canvasView = PKCanvasView()
     @State private var showingAlert = false
     
     var body: some View {
-        DrawingCanvasView(canvasView: canvasView, drawing: $drawing)
-            .navigationTitle(drawing.title ?? "Untitled")
-            .toolbar {
-                ToolbarItemGroup(placement: .navigationBarTrailing) {
-                    HStack {
-                        Button {
-                            // 현재 canvasView 캡처해서 앨범에 저장
-                        } label: {
-                            Image(systemName: "camera")
-                        }
-                        .alert(isPresented: $showingAlert) {
-                            Alert(title: Text("그림이 앨범에 저장되었습니다."))
-                        }
-                        Button {
-                            // 현재 드로잉 진행 상황을 저장
-                        } label: {
-                            Image(systemName: "square.and.arrow.down")
-                        }
-                    }
-                    .padding(.horizontal, 7)
+        VStack {
+            HStack(spacing: 20) {
+                Button { // undo
+                    undoManager?.undo()
+                } label: {
+                    Image(systemName: "arrow.uturn.backward")
                 }
+                Button { // redo
+                    undoManager?.redo()
+                } label: {
+                    Image(systemName: "arrow.uturn.forward")
+                }
+                Button { // clear
+                    canvasView.drawing = PKDrawing()
+                } label: {
+                    Image(systemName: "trash")
+                }
+                .foregroundColor(.red)
             }
+            .padding(.bottom, 5)
+            DrawingCanvasView(canvasView: canvasView, drawing: $drawing)
+        }
+        .navigationTitle(drawing.title ?? "Untitled")
+        .toolbar {
+            ToolbarItemGroup(placement: .navigationBarTrailing) {
+                HStack {
+                    Button {
+                        // 현재 canvasView 캡처해서 앨범에 저장
+                    } label: {
+                        Image(systemName: "camera")
+                    }
+                    .alert(isPresented: $showingAlert) {
+                        Alert(title: Text("그림이 앨범에 저장되었습니다."))
+                    }
+                    Button {
+                        // 현재 드로잉 진행 상황을 저장
+                    } label: {
+                        Image(systemName: "square.and.arrow.down")
+                    }
+                }
+                .padding(.horizontal, 7)
+            }
+        }
     }
 }
 
