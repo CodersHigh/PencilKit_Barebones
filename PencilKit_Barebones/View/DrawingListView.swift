@@ -21,6 +21,13 @@ struct DrawingListView: View {
                             Text(drawing.title ?? "untitled")
                         }
                     }
+                    .onDelete { indexSet in
+                        indexSet.forEach { index in
+                            let drawing = viewModel.drawings[index]
+                            viewModel.deleteDrawing(drawing: drawing)
+                            viewModel.fetchDrawing()
+                        }
+                    }
                     Button {
                         self.showingSheet.toggle()
                     } label: {
