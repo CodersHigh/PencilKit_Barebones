@@ -21,13 +21,20 @@ struct AddCanvasView: View {
             }
             .navigationViewStyle(StackNavigationViewStyle())
             .navigationTitle(Text("새로운 그림"))
-            .navigationBarItems(leading: Button("취소") {
-                self.presentationMode.wrappedValue.dismiss()
-            }, trailing: Button("저장") {
-                onComplete(canvasTitle)
-                self.presentationMode.wrappedValue.dismiss()
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button("취소") {
+                        self.presentationMode.wrappedValue.dismiss()
+                    }
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("저장") {
+                        onComplete(canvasTitle)
+                        self.presentationMode.wrappedValue.dismiss()
+                    }
+                    .disabled(canvasTitle.isEmpty)
+                }
             }
-            .disabled(canvasTitle.isEmpty))
         }
     }
 }
