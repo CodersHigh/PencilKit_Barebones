@@ -7,6 +7,8 @@
 - PencilKit을 처음 활용해 보는 경우, 이 프로젝트의 코드를 살펴보면 도움이 됩니다.
 
 
+https://user-images.githubusercontent.com/74223246/181436930-6f83426c-32a0-40f4-8076-b9210e97d66d.mp4
+
 
 <br/>
 
