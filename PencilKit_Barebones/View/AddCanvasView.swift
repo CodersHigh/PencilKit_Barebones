@@ -19,14 +19,15 @@ struct AddCanvasView: View {
                     TextField("여기에 새로운 그림의 제목을 입력하세요.", text: $canvasTitle)
                 }
             }
-            .navigationViewStyle(StackNavigationViewStyle())
             .navigationTitle(Text("새로운 그림"))
             .toolbar {
+                // 취소를 누르면 아무 작업도 하지 않고 뒤로 가기
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button("취소") {
                         self.presentationMode.wrappedValue.dismiss()
                     }
                 }
+                // 저장을 누르면 입력한 제목의 드로잉을 생성하고 뒤로 가기
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("저장") {
                         viewModel.addDrawing(title: canvasTitle)

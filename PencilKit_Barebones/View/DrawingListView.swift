@@ -14,43 +14,45 @@ struct DrawingListView: View {
 
     var body: some View {
         NavigationView {
-            VStack {
-                List {
-                    ForEach(viewModel.drawings, id: \.self) { drawing in
-                        NavigationLink(destination: DrawingView(viewModel: viewModel, drawing: drawing)) {
-                            Text(drawing.title ?? "untitled")
-                        }
-                    }
-                    .onDelete { indexSet in
-                        indexSet.forEach { index in
-                            let drawing = viewModel.drawings[index]
-                            viewModel.deleteDrawing(drawing: drawing)
-                            viewModel.fetchDrawing()
-                        }
-                    }
-                    Button {
-                        self.showingSheet.toggle()
-                    } label: {
-                        HStack {
-                            Image(systemName: "plus")
-                            Text("새로운 그림")
-                        }
-                    }
-                    .foregroundColor(.blue)
-                    .sheet(isPresented: $showingSheet) {
-                        AddCanvasView(viewModel: viewModel)
+            List {
+                ForEach(viewModel.drawings, id: \.self) { drawing in
+                    // 셀을 누를 시, 해당 드로잉 편집 화면으로 이동
+                    NavigationLink(destination: DrawingView(viewModel: viewModel, drawing: drawing)) {
+                        Text(drawing.title ?? "untitled")
                     }
                 }
-                .navigationTitle(Text("그림들"))
+                // 셀을 스와이프할 시, 해당 드로잉 삭제
+                .onDelete { indexSet in
+                    indexSet.forEach { index in
+                        let drawing = viewModel.drawings[index]
+                        viewModel.deleteDrawing(drawing: drawing)
+                        viewModel.fetchDrawing()
+                    }
+                }
+                // <+ 새로운 그림> 버튼 눌렀을 때 AddCanvasView로 이동
+                Button {
+                    self.showingSheet.toggle()
+                } label: {
+                    HStack {
+                        Image(systemName: "plus")
+                        Text("새로운 그림")
+                    }
+                }
+                .foregroundColor(.blue)
+                .sheet(isPresented: $showingSheet) {
+                    AddCanvasView(viewModel: viewModel)
+                }
             }
-            VStack { // 아이패드에서만 표시되는 부분
+            .navigationTitle(Text("그림들"))
+            
+            // 아이패드에서만 표시되는 부분
+            VStack {
                 Image(systemName: "scribble.variable")
                     .font(.largeTitle)
                 Text("캔버스를 선택하고 그림을 그리세요!")
                     .font(.title)
             }
         }
-        .navigationViewStyle(DoubleColumnNavigationViewStyle())
         .onAppear {
             viewModel.fetchDrawing()
         }
