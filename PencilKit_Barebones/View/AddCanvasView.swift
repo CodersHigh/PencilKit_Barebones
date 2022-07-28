@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct AddCanvasView: View {
+    @ObservedObject var viewModel: DrawingViewModel
     @Environment (\.presentationMode) var presentationMode
     @State private var canvasTitle = ""
-    let onComplete: (String) -> Void
     
     var body: some View {
         NavigationView {
@@ -29,7 +29,8 @@ struct AddCanvasView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("저장") {
-                        onComplete(canvasTitle)
+                        viewModel.addDrawing(title: canvasTitle)
+                        viewModel.fetchDrawing()
                         self.presentationMode.wrappedValue.dismiss()
                     }
                     .disabled(canvasTitle.isEmpty)

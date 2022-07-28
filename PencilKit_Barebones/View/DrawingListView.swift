@@ -38,15 +38,12 @@ struct DrawingListView: View {
                     }
                     .foregroundColor(.blue)
                     .sheet(isPresented: $showingSheet) {
-                        AddCanvasView { title in
-                            viewModel.addDrawing(title: title)
-                            viewModel.fetchDrawing()
-                        }
+                        AddCanvasView(viewModel: viewModel)
                     }
                 }
                 .navigationTitle(Text("그림들"))
             }
-            VStack {
+            VStack { // 아이패드에서만 표시되는 부분
                 Image(systemName: "scribble.variable")
                     .font(.largeTitle)
                 Text("캔버스를 선택하고 그림을 그리세요!")

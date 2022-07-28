@@ -15,6 +15,7 @@ struct DrawingView: View {
     @Environment(\.undoManager) private var undoManager
     @State var drawing: Drawing
     @State private var canvasView = PKCanvasView()
+    @State private var showingAlert = false
     
     var body: some View {
         DrawingCanvasView(canvasView: canvasView, drawing: $drawing)
@@ -31,8 +32,14 @@ struct DrawingView: View {
                         }
                         Button {
                             // 현재 드로잉 진행 상황을 저장
+                            drawing.data = canvasView.drawing.dataRepresentation()
+                            viewModel.saveContext()
+                            showingAlert = true
                         } label: {
                             Image(systemName: "square.and.arrow.down")
+                        }
+                        .alert(isPresented: $showingAlert) {
+                            Alert(title: Text("그리기 진행 상황이 저장되었습니다."))
                         }
                     }
                 }
